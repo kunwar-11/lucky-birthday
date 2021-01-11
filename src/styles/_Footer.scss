@@ -1,0 +1,16 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0rem;
+    text-align: center;
+    transition: background 0.5s ease;
+    .icon {
+        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        cursor: pointer;
+    }
+}
+

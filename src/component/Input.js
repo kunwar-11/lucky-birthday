@@ -1,11 +1,11 @@
 import React , { useState , useEffect } from 'react'
 import Button from './Button'
-function Input({birthDay , setBirthDay , setIsLucky , setDisplay}) {
+function Input({birthDay , setBirthDay , setIsLucky , setDisplay  , setFullDate , isDark}) {
     const [currentDate , setCurrentDate] = useState('')
     const [lucky , setLucky] = useState('')
     const changeDateHandler = (e) => {
         console.log(e.target.value)
-        setBirthDay(e.target.value)
+        setBirthDay(e.target.value || '')
     }
     const luckyChangeHandler = (e) => {
         setLucky(parseInt(e.target.value) || '')
@@ -32,11 +32,11 @@ function Input({birthDay , setBirthDay , setIsLucky , setDisplay}) {
     },[currentDate])
     return (
         <form>
-            <input onChange = {changeDateHandler} type="date" max = {currentDate} value = {birthDay}/>
-            <input onChange = {luckyChangeHandler} type="number" value = {lucky} placeholder = 'enter your lucky number'/>
+            <input className = {`${isDark ? 'darkIP' : ''}`} onChange = {changeDateHandler} type="date" max = {currentDate} value = {birthDay}/>
+            <input className = {`${isDark ? 'darkIP' : ''}`} onChange = {luckyChangeHandler} type="number" value = {lucky} placeholder = 'enter your lucky number'/>
                 {/* {currentDate}
                 {birthDay} */}
-            <Button setBirthDay = {setBirthDay} birthDay = {birthDay} lucky = {lucky} setLucky = {setLucky} setIsLucky = {setIsLucky} setDisplay = {setDisplay}/>    
+            <Button setBirthDay = {setBirthDay} birthDay = {birthDay} lucky = {lucky} setLucky = {setLucky} setIsLucky = {setIsLucky} setDisplay = {setDisplay} setFullDate = {setFullDate} isDark = {isDark}/>    
         </form>
     )
 }

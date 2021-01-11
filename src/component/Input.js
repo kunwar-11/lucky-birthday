@@ -32,7 +32,7 @@ function Input({birthDay , setBirthDay , setIsLucky , setDisplay  , setFullDate 
     },[currentDate])
     return (
         <form>
-            <input className = {`${isDark ? 'darkIP' : ''}`} onChange = {changeDateHandler} type="date" max = {currentDate} value = {birthDay}/>
+            <input name = 'date' className = {`date ${isDark ? 'darkIP' : ''}`} onChange = {changeDateHandler} type="date" max = {currentDate} placeholder = 'enter your birthday' value = {birthDay}/>
             <input className = {`${isDark ? 'darkIP' : ''}`} onChange = {luckyChangeHandler} type="number" value = {lucky} placeholder = 'enter your lucky number'/>
                 {/* {currentDate}
                 {birthDay} */}

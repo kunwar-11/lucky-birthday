@@ -32,6 +32,7 @@ function Input({birthDay , setBirthDay , setIsLucky , setDisplay  , setFullDate 
     },[currentDate])
     return (
         <form>
+            <h4 style = {{margin : '0rem 1rem'}}>Enter your birthDay :- </h4>
             <input name = 'date' className = {`date ${isDark ? 'darkIP' : ''}`} onChange = {changeDateHandler} type="date" max = {currentDate} placeholder = 'enter your birthday' value = {birthDay}/>
             <input className = {`${isDark ? 'darkIP' : ''}`} onChange = {luckyChangeHandler} type="number" value = {lucky} placeholder = 'enter your lucky number'/>
                 {/* {currentDate}

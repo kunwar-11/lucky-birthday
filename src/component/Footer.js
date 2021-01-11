@@ -4,9 +4,16 @@ import {faGithub , faInstagram , faTwitter} from '@fortawesome/free-brands-svg-i
 function Footer({isDark}) {
     return (
         <footer >
-           <FontAwesomeIcon href = 'https://github.com/kunwar-11' className = 'icon' size = '2x' icon = {faGithub}/>
-           <FontAwesomeIcon href = 'https://www.instagram.com/11rish09/' className = 'icon' size = '2x' icon = {faInstagram}/>
-           <FontAwesomeIcon href = 'https://twitter.com/RishabhKunwar11' className = 'icon' size = '2x' icon = {faTwitter}/>
+            <a href = 'https://github.com/kunwar-11'>
+                <FontAwesomeIcon  className = 'icon' size = '2x' icon = {faGithub}/>
+            </a>
+            <a href = 'https://www.instagram.com/11rish09/'>
+                <FontAwesomeIcon  className = 'icon' size = '2x' icon = {faInstagram}/>
+            </a>
+            <a href = 'https://twitter.com/RishabhKunwar11'>
+                <FontAwesomeIcon className = 'icon' size = '2x' icon = {faTwitter}/>
+            </a>
+           
         </footer>
     )
 }
